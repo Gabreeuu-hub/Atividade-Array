@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const listaDeCompras = ["maçã", "banana", "laranja", "uva"];
+
+        console.log("Lista de Compras: " + listaDeCompras.join(", "));
+
+        while (listaDeCompras.length > 0) {
+            const frutaRemover = prompt("Digite o nome de uma fruta para remover:");
+
+            // Verifica se a fruta está na lista
+            const indiceDaFruta = listaDeCompras.indexOf(frutaRemover);
+
+            if (indiceDaFruta !== -1) {
+                // Se a fruta estiver na lista remova
+                listaDeCompras.splice(indiceDaFruta, 1);
+                console.log("Fruta foi retirada da lista.");
+            } else {
+                console.log("Fruta indisponível no nosso mercado.");
+            }
+        }
+
+        console.log("Lista de compras finalizada.");
+
+    </script>
+</body>
+
+</html>
