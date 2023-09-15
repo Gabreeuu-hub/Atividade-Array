@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+        //Escreva o nome dos planetas corretamente como está acima.
+        var planetaUsuario = prompt("Digite o nome de um planeta:");
+        // Verifica se o planeta digitado pelo usuário está na array.
+        if (planetas.indexOf(planetaUsuario) !== -1) {
+            console.log("Sim, o planeta " + planetaUsuario + " está na lista!");
+        } else {
+            console.log("o planeta " + planetaUsuario + " não está na lista, tente outro.");
+        }
+
+    </script>
+</body>
+
+</html>
