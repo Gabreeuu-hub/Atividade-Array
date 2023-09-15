@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const estudantes = [];
+
+        function cadastrarEstudante() {
+            const nome = prompt("Digite o nome do estudante (ou 'PARE' para encerrar):");
+
+            if (nome.toUpperCase() === "PARE") {
+                mostrarEstudantes();
+            } else {
+                estudantes.push(nome);
+                cadastrarEstudante();
+            }
+        }
+
+        function mostrarEstudantes() {
+            const quantidade = estudantes.length;
+
+            if (quantidade === 0) {
+                console.log("Nenhum estudante cadastrado.");
+            } else {
+                console.log(`Quantidade de estudantes cadastrados: ${quantidade}`);
+                console.log("Lista de estudantes cadastrados:");
+
+                for (let i = 0; i < quantidade; i++) {
+                    console.log(`${i + 1}. ${estudantes[i]}`);
+                }
+            }
+        }
+
+        cadastrarEstudante();
+
+    </script>
+</body>
+
+</html>
