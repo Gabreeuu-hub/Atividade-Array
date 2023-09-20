@@ -10,9 +10,9 @@
 <body>
     <script>
         const listaDeCompras = ["maçã", "banana", "laranja", "uva"];
-
+        //Array de strings representando uma lista de compras
         console.log("Lista de Compras: " + listaDeCompras.join(", "));
-
+        //há um loop while que continua enquanto o tamanho da listaDeCompras for maior que zero
         while (listaDeCompras.length > 0) {
             const frutaRemover = prompt("Digite o nome de uma fruta para remover:");
 
@@ -20,7 +20,7 @@
             const indiceDaFruta = listaDeCompras.indexOf(frutaRemover);
 
             if (indiceDaFruta !== -1) {
-                // Se a fruta estiver na lista remova
+                // Se a fruta estiver na lista, ela é removida usando splice
                 listaDeCompras.splice(indiceDaFruta, 1);
                 console.log("Fruta foi retirada da lista.");
             } else {
