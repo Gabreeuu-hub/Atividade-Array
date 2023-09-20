@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
         const estudantes = [];
 
         function cadastrarEstudante() {
-            const nome = prompt("Digite o nome do estudante (ou 'PARE' para encerrar):");
+            const nome = prompt("Digite o nome do estudante ou 'PARE' para finalizar o cadastro:");
 
             if (nome.toUpperCase() === "PARE") {
                 mostrarEstudantes();
@@ -26,14 +26,14 @@
             const quantidade = estudantes.length;
 
             if (quantidade === 0) {
-                console.log("Nenhum estudante cadastrado.");
+                console.log("Nenhum estudante cadastrado."); //se quantidade for igual a 0, nenhum estudante cadastrado
             } else {
-                console.log(`Quantidade de estudantes cadastrados: ${quantidade}`);
+                console.log(`Quantidade de estudantes: ${quantidade}`); //exibe o numero de estudantes cadastrados
                 console.log("Lista de estudantes cadastrados:");
 
                 for (let i = 0; i < quantidade; i++) {
                     console.log(`${i + 1}. ${estudantes[i]}`);
-                }
+                } //Exibe os estudantes cadastrados em uma lista numerada
             }
         }
 
